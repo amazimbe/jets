@@ -89,7 +89,7 @@ module Jets::Commands
         if configurations[environment].blank?
           raise ActiveRecord::AdapterNotSpecified, "'#{environment}' database is not configured. Available configuration: #{configurations.inspect}"
         else
-          configurations[environment]
+          configurations[environment].with_indifferent_access
         end
       end
     end
