@@ -91,6 +91,8 @@ module Jets::Commands
         else
           configurations[environment].with_indifferent_access
         end
+
+        puts configurations[environment]
       end
     end
 
